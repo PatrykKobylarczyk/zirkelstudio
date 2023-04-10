@@ -14,7 +14,7 @@ const projectVariant = {
 const Loader = () => {
   return (
     <motion.div
-      className="loader w-full grid place-items-center bg-white z-[200]"
+      className="loader w-full h-screen grid place-items-center bg-white z-[200]"
       initial={{ opacity: 1 }}
       animate={{ opacity: 0 }}
       transition={{ delay: 2.5, duration: 0.5 }}
