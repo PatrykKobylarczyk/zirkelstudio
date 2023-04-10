@@ -10,7 +10,9 @@
   only screen and (min-resolution: 2dppx) and (max-width: 700px) {
   /* Medium screen, retina, stuff to override above media query */
 
-  main, body {
+  main,
+  body,
+  html {
     height: 100dvh;
   }
 }

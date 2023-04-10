@@ -17,7 +17,7 @@ const Contact = () => {
   };
 
   return (
-    <main className="w-full h-screen flex flex-col justify-center items-center gap-3 md:gap-12 px-5">
+    <main className="w-full flex flex-col justify-center items-center gap-3 md:gap-12 px-5">
       <div className="text-sm md:text-lg font-bold text-center">
         <p>Have a question? Just want to say hi?</p>
         <p>Please use the box below.</p>
@@ -40,7 +40,7 @@ const Contact = () => {
           method="POST"
         >
           <input
-            className="w-full text-xs placeholder-gray-500 p-4 border-[1px] border-b-0 border-gray-500 focus:border-none"
+            className="w-full text-xs placeholder-gray-500 p-4 border-[1px] border-b-0 border-gray-500 focus:border-none rounded-none"
             type="text"
             placeholder="Name"
             {...register("name", {
@@ -51,7 +51,7 @@ const Contact = () => {
           <input
             className={`w-full text-xs placeholder-gray-500 p-4 border-[1px] ${
               errors.email ? "" : "border-b-0"
-            } border-gray-500`}
+            } border-gray-500 rounded-none`}
             type="text"
             placeholder="Email"
             {...register("email", {
@@ -67,7 +67,7 @@ const Contact = () => {
           )}
 
           <textarea
-            className="w-full text-xs placeholder-gray-500 p-4 border-[1px] border-gray-500"
+            className="w-full text-xs placeholder-gray-500 p-4 border-[1px] border-gray-500 rounded-none"
             placeholder="Message"
             rows={10}
             cols={50}
@@ -86,7 +86,7 @@ const Contact = () => {
           )}
 
           <button
-            className="py-4 px-8 mt-2 text-xs placeholder-gray-500 hover:bg-gray-100 transition duration-300 border-[1px]  border-gray-500"
+            className="py-4 px-8 mt-2 text-xs placeholder-gray-500 hover:bg-gray-100 transition duration-300 border-[1px]  border-gray-500 rounded-none"
             type="submit"
           >
             Send Message
