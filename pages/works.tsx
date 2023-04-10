@@ -11,7 +11,7 @@ import Thumbnail from "@/components/Thumbnail";
 const Works = () => {
   return (
     <div className="w-[95vw]  m-auto mt-24">
-      <div className="grid place-items-center grid-cols-1 md:grid-cols-3 gap-2 sm:gap-5">
+      <div className="grid place-items-center grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2 sm:gap-5">
         {images.map((image, i) => (
           <motion.div
             key={i}
