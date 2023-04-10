@@ -1,7 +1,15 @@
-import Carousel from '@/components/Carousel'
-import Head from 'next/head'
+import Carousel from "@/components/Carousel";
+import Loader from "@/components/Loader";
+import Head from "next/head";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 3000);
+  }, []);
+
   return (
     <>
       <Head>
@@ -10,9 +18,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className='h-screen w-full grid place-items-center relative'>
-       <Carousel/>
+      <main className="w-full grid place-items-center relative">
+        {loading && <Loader />}
+        <Carousel />
       </main>
     </>
-  )
+  );
 }

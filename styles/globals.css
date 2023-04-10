@@ -12,7 +12,7 @@
 
   main,
   body,
-  html {
+  html, .loader {
     height: 100dvh;
   }
 }
