@@ -17,7 +17,7 @@ const Contact = () => {
   };
 
   return (
-    <main className="w-full h-screen flex flex-col justify-center items-center gap-3 md:gap-12 p-5">
+    <main className="w-full h-screen flex flex-col justify-center items-center gap-3 md:gap-12 px-5">
       <div className="text-sm md:text-lg font-bold text-center">
         <p>Have a question? Just want to say hi?</p>
         <p>Please use the box below.</p>

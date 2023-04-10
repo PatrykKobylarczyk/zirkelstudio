@@ -26,9 +26,9 @@ const Navbar = ({ children }: any) => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 bg-white w-full h-24">
-        <div className=" w-full h-full flex justify-between items-center px-5 md:px-20">
-          <Link className="text-xl font-bold z-50 ml-4" href={"/"}>
+      <header className="fixed top-0 left-0 bg-white w-full h-24 z-50">
+        <div className="w-screen h-full flex justify-between items-center px-5 md:px-20">
+          <Link className="text-xl font-bold z-50 ml-4 md:ml-0" href={"/"}>
             zirkelstudio.
           </Link>
           {isAboveMediumScreens ? (
@@ -39,7 +39,7 @@ const Navbar = ({ children }: any) => {
               <Link href="/contact">Contact</Link>
             </div>
           ) : (
-            <div className="z-50">
+            <div className="">
               <Hamburger
                 toggled={isMenuToggled}
                 toggle={() => setIsMenuToggled((prev) => !prev)}
@@ -49,13 +49,13 @@ const Navbar = ({ children }: any) => {
             </div>
           )}
         </div>
-        {children}
       </header>
+      {children}
       {/* MOBILE MENU POPUP */}
       <AnimatePresence>
         {!isAboveMediumScreens && isMenuToggled && (
           <motion.div
-            className="fixed right-0 top-0 h-full bg-white text-black w-full z-40"
+            className="fixed right-0 top-0 h-full bg-white text-black w-full"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, transition: { delay: 0.3 } }}
@@ -64,7 +64,7 @@ const Navbar = ({ children }: any) => {
             {/* MENU ITEMS */}
             <AnimatePresence>
               <motion.div
-                className="w-full h-full flex flex-col gap-6 items-center justify-center text-sm "
+                className="w-screen h-screen flex flex-col gap-6 items-center justify-center text-sm"
                 initial="hidden"
                 animate="visible"
                 viewport={{ once: true }}
