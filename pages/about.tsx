@@ -5,11 +5,11 @@ import profile from "../assets/profile2.jpg";
 const About = () => {
   return (
     <div className="py-32 w-full h-full grid place-items-center">
-      <div className="flex flex-col md:flex-row w-[60vw] gap-16 md:gap-24 ">
+      <div className="flex flex-col p-5 md:flex-row md:w-[60vw] gap-16 md:gap-24 ">
         <div className="w-full md:w-5/12 h-auto">
           <Image src={profile} alt="Patryk Kobylarczyk" />
         </div>
-        <div className="w-full md:w-7/12 flex flex-col gap-5 justify-center">
+        <div className="w-full md:w-7/12 flex flex-col gap-5 justify-center p-5">
           <h2 className="text-3xl font-bold">Hello.</h2>
           <p>
             My name is Patrick. I've never climbed Everest, crushed cars with
