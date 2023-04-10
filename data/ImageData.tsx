@@ -117,11 +117,6 @@ export const images = [
         alt: 'real estate photo',
     },
     {
-        id: 19,
-        path: photo19,
-        alt: 'real estate photo',
-    },
-    {
         id: 20,
         path: photo20,
         alt: 'real estate photo',
