@@ -1,4 +1,4 @@
-import useMediaQuery from "@/hooks/useMediaQueries";
+import useMediaQuery from "@/hooks/useMediaQuery";
 import React, { useState } from "react";
 import { Squash as Hamburger } from "hamburger-react";
 import { AnimatePresence } from "framer-motion";
