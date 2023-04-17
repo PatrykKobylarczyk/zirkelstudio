@@ -4,6 +4,14 @@ import { Squash as Hamburger } from "hamburger-react";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 import Link from "next/link";
+// DATA
+import { lang_EN } from "../data/LanguageData";
+import { lang_PL } from "../data/LanguageData";
+import { lang_HR } from "../data/LanguageData";
+
+// STATE
+import { useRecoilState } from "recoil";
+import { languageState } from "../atoms/atom";
 
 const menuListAnimation = {
   hidden: {},
@@ -24,6 +32,11 @@ const Navbar = ({ children }: any) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const [isMenuToggled, setIsMenuToggled] = useState(false);
 
+  const [language] = useRecoilState(languageState);
+
+  const lang =
+    language === "PL" ? lang_PL : language === "HR" ? lang_HR : lang_EN;
+
   return (
     <>
       <header className="fixed top-0 left-0 bg-white w-full h-24 z-50">
@@ -33,10 +46,10 @@ const Navbar = ({ children }: any) => {
           </Link>
           {isAboveMediumScreens ? (
             <div className="flex gap-10 text-sm">
-              <Link href="/">Home</Link>
-              <Link href="/works">Works</Link>
-              <Link href="/about">About</Link>
-              <Link href="/contact">Contact</Link>
+              <Link href="/">{lang.menu_home}</Link>
+              <Link href="/works">{lang.menu_works}</Link>
+              <Link href="/about">{lang.menu_about}</Link>
+              <Link href="/contact">{lang.menu_contact}</Link>
             </div>
           ) : (
             <div className="">
@@ -78,7 +91,7 @@ const Navbar = ({ children }: any) => {
                   variants={projectVariant}
                 >
                   <Link href="/" onClick={() => setIsMenuToggled(false)}>
-                    Home
+                    {lang.menu_home}
                   </Link>
                 </motion.div>
                 <motion.div
@@ -89,7 +102,7 @@ const Navbar = ({ children }: any) => {
                   variants={projectVariant}
                 >
                   <Link href="/works" onClick={() => setIsMenuToggled(false)}>
-                    Works
+                    {lang.menu_works}
                   </Link>
                 </motion.div>
                 <motion.div
@@ -100,7 +113,7 @@ const Navbar = ({ children }: any) => {
                   variants={projectVariant}
                 >
                   <Link href="/about" onClick={() => setIsMenuToggled(false)}>
-                    About
+                    {lang.menu_about}
                   </Link>
                 </motion.div>
                 <motion.div
@@ -111,7 +124,7 @@ const Navbar = ({ children }: any) => {
                   variants={projectVariant}
                 >
                   <Link href="/contact" onClick={() => setIsMenuToggled(false)}>
-                    Contact
+                    {lang.menu_contact}
                   </Link>
                 </motion.div>
               </motion.div>
