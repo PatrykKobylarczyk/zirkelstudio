@@ -6,6 +6,7 @@ import { Modal } from "@mui/material";
 import Image from "next/image";
 import { MdWest, MdEast } from "react-icons/md";
 
+
 //HOOKS
 import useMediaQuery from "../hooks/useMediaQuery";
 
@@ -53,54 +54,54 @@ const Works = () => {
   };
 
   return (
-    <div className="w-[95vw]  m-auto mt-24">
-      <div className="grid place-items-center grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2 sm:gap-5">
-        {images.map((image, i) => (
-          <motion.div key={i} onClick={() => handleOpenModal(i)}>
-            <Thumbnail image={image.path} />
-          </motion.div>
-        ))}
+      <div className="w-[95vw]  m-auto mt-24">
+        <div className="grid place-items-center grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2 sm:gap-5">
+          {images.map((image, i) => (
+            <motion.div key={i} onClick={() => handleOpenModal(i)}>
+              <Thumbnail image={image.path} />
+            </motion.div>
+          ))}
+        </div>
+        {isAboveSmallScreens && (
+          <Modal
+            open={open}
+            onClose={() => setOpen(false)}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+          >
+            <div className="flex justify-center">
+              <div style={style as any} className={`h-[80vh]`}>
+                <Image
+                  src={images[currentImage].path}
+                  alt="Interior photo"
+                  className={`h-full aspect-auto m-auto ${
+                    currentImage === 0 || currentImage === images.length - 1
+                      ? "object-contain"
+                      : "object-cover"
+                  }`}
+                  onClick={() => setOpen(false)}
+                />
+              </div>
+              <div className="flex justify-center gap-10 absolute bottom-0 py-5 text-white font-light">
+                <button
+                  className="w-10 h-10 grid place-items-center border-[1px] border-white rounded-full opacity-60 hover:opacity-90 transition duration-200"
+                  onClick={handlePrevImage}
+                  onKeyDown={handleKeyDown}
+                >
+                  <MdWest />
+                </button>
+                <button
+                  className="w-10 h-10 grid place-items-center border-[1px] border-white rounded-full opacity-60 hover:opacity-90 transition duration-200"
+                  onClick={handleNextImage}
+                  onKeyDown={handleKeyDown}
+                >
+                  <MdEast />
+                </button>
+              </div>
+            </div>
+          </Modal>
+        )}
       </div>
-      {isAboveSmallScreens && (
-        <Modal
-          open={open}
-          onClose={() => setOpen(false)}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
-        >
-          <div className="flex justify-center bg-red-500">
-            <div style={style as any} className={`h-[80vh]`}>
-              <Image
-                src={images[currentImage].path}
-                alt="Interior photo"
-                className={`h-full aspect-auto m-auto ${
-                  currentImage === 0 || currentImage === images.length - 1
-                    ? "object-contain"
-                    : "object-cover"
-                }`}
-                onClick={() => setOpen(false)}
-              />
-            </div>
-            <div className="flex justify-center gap-10 absolute bottom-0 py-5 text-white font-light">
-              <button
-                className="w-10 h-10 grid place-items-center border-[1px] border-white rounded-full opacity-60 hover:opacity-90 transition duration-200"
-                onClick={handlePrevImage}
-                onKeyDown={handleKeyDown}
-              >
-                <MdWest />
-              </button>
-              <button
-                className="w-10 h-10 grid place-items-center border-[1px] border-white rounded-full opacity-60 hover:opacity-90 transition duration-200"
-                onClick={handleNextImage}
-                onKeyDown={handleKeyDown}
-              >
-                <MdEast />
-              </button>
-            </div>
-          </div>
-        </Modal>
-      )}
-    </div>
   );
 };
 
