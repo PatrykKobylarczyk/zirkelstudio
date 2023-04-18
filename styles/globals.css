@@ -12,7 +12,7 @@
 
   main,
   body,
-  html, .loader {
+  html, .loader, .ios {
     height: 100dvh;
   }
 }
