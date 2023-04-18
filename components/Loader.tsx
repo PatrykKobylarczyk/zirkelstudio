@@ -1,5 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
+// DATA
+import { lang_EN } from "../data/LanguageData";
+import { lang_PL } from "../data/LanguageData";
+import { lang_HR } from "../data/LanguageData";
+
+// STATE
+import { useRecoilState } from "recoil";
+import { languageState } from "../atoms/atom";
 
 const item = {
   hidden: { opacity: 1 },
@@ -12,6 +20,12 @@ const projectVariant = {
 };
 
 const Loader = () => {
+
+  const [language] = useRecoilState(languageState);
+
+  const lang = language === "PL" ? lang_PL : language === "HR" ? lang_HR : lang_EN;
+
+
   return (
     <motion.div
       className="loader w-full h-screen grid place-items-center bg-white z-[200]"
@@ -39,7 +53,7 @@ const Loader = () => {
           }}
           variants={projectVariant}
         >
-          <h1 className="text-xl font-bold z-50 ml-4 md:ml-0">zirkelstudio.</h1>
+          <h1 className="text-xl font-bold z-50 ml-4 md:ml-0">zirkelstudio<span className="text-bold text-[#DA0F40]">.</span></h1>
         </motion.div>
         <motion.div
           transition={{
@@ -48,7 +62,7 @@ const Loader = () => {
           }}
           variants={projectVariant}
         >
-          <p>Real Estate Photography</p>
+          <p>{lang.loader}</p>
         </motion.div>
       </motion.div>
     </motion.div>

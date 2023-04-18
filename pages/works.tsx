@@ -6,9 +6,9 @@ import { Modal } from "@mui/material";
 import Image from "next/image";
 import { MdWest, MdEast } from "react-icons/md";
 
-
 //HOOKS
 import useMediaQuery from "../hooks/useMediaQuery";
+import PageTransitioning from "@/components/PageTransitioning";
 
 const style = {
   position: "absolute" as "absolute",
@@ -54,6 +54,8 @@ const Works = () => {
   };
 
   return (
+    <>
+      <PageTransitioning />
       <div className="w-[95vw]  m-auto mt-24">
         <div className="grid place-items-center grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2 sm:gap-5">
           {images.map((image, i) => (
@@ -102,6 +104,7 @@ const Works = () => {
           </Modal>
         )}
       </div>
+    </>
   );
 };
 

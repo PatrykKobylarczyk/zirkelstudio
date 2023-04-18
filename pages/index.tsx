@@ -1,5 +1,6 @@
 import Carousel from "@/components/Carousel";
 import Loader from "@/components/Loader";
+import PageTransitioning from "@/components/PageTransitioning";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 
@@ -18,6 +19,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <PageTransitioning/>
       <main className="w-full md:h-screen grid place-items-center relative">
         {loading && <Loader />}
         <Carousel />
