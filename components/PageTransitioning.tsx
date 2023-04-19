@@ -40,7 +40,7 @@ const PageTransitioning = () => {
       />
       <motion.div
         variants={variants}
-        className="ios fixed -bottom-full left-0 w-full h-screen z-[9999] bg-red-500"
+        className="ios fixed -bottom-full left-0 w-full h-screen z-[9999] bg-black"
         exit="exitStop"
        
       />

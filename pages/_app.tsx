@@ -3,14 +3,14 @@ import "@/styles/globals.css";
 import { AnimatePresence } from "framer-motion";
 import type { AppProps } from "next/app";
 import { RecoilRoot } from "recoil";
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps, router }: AppProps) {
   return (
     <RecoilRoot>
-      <AnimatePresence mode='wait' >
-        <Navbar>
-          <Component {...pageProps} />
-        </Navbar>
-      </AnimatePresence>
+      <Navbar>
+        <AnimatePresence mode="wait" initial={false}>
+          <Component key={router.pathname} {...pageProps} />
+        </AnimatePresence>
+      </Navbar>
     </RecoilRoot>
   );
 }
