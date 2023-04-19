@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import profile from "../assets/profile2.jpg";
+import { motion } from "framer-motion";
 
 // DATA
 import { lang_EN } from "../data/LanguageData";
@@ -27,15 +28,52 @@ const About = () => {
             <Image src={profile} alt="Patryk Kobylarczyk" priority />
           </div>
           <div className="w-full md:w-7/12 flex flex-col gap-5 justify-center p-5">
-            <h2 className="text-3xl font-bold">
-              {lang.about_hello}
-              <span className="text-bold text-[#DA0F40]">.</span>
-            </h2>
-            <p>{lang.about_par1}</p>
-            <p>{lang.about_par2}</p>
-            <p>{lang.about_par3}</p>
-            <p>{lang.about_par4}</p>
-            <p>{lang.about_par5}</p>
+            <motion.div className="overflow-hidden">
+              <motion.h2
+                className="text-3xl font-bold"
+                initial={{ y: "100%" }}
+                whileInView={{ y: 0 }}
+                transition={{ duration: 0.75, delay: 0.5 }}
+              >
+                {lang.about_hello}
+                <span className="text-bold text-[#DA0F40]">.</span>
+              </motion.h2>
+            </motion.div>
+            <motion.p
+              initial={{ y: "20%" }}
+              whileInView={{ y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              {lang.about_par1}
+            </motion.p>
+            <motion.p
+              initial={{ y: "20%" }}
+              whileInView={{ y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              {lang.about_par2}
+            </motion.p>
+            <motion.p
+              initial={{ y: "20%" }}
+              whileInView={{ y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              {lang.about_par3}
+            </motion.p>
+            <motion.p
+              initial={{ y: "20%" }}
+              whileInView={{ y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              {lang.about_par4}
+            </motion.p>
+            <motion.p
+              initial={{ y: "20%" }}
+              whileInView={{ y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              {lang.about_par5}
+            </motion.p>
           </div>
         </div>
       </div>
