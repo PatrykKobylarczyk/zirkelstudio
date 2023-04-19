@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const variants = {
   initial: {
@@ -8,7 +8,7 @@ const variants = {
   animate: {
     bottom: "100vh",
     transition: {
-      duration: .7,
+      duration: 0.7,
       ease: [0.12, 1, 0.2, 1],
     },
   },
@@ -40,9 +40,8 @@ const PageTransitioning = () => {
       />
       <motion.div
         variants={variants}
-        className="ios fixed -bottom-full left-0 w-full h-screen z-[9999] bg-[#DA0F40]"
+        className="ios fixed -bottom-[120vh] left-0 w-full h-screen z-[9999] bg-[#DA0F40]"
         exit="exitStop"
-       
       />
     </div>
   );

@@ -67,75 +67,83 @@ const Navbar = ({ children }: any) => {
       </header>
       {children}
       {/* MOBILE MENU POPUP */}
-      <AnimatePresence>
-        {!isAboveMediumScreens && isMenuToggled && (
+
+      {!isAboveMediumScreens && isMenuToggled && (
+        <motion.div
+          className="fixed right-0 top-0 h-full bg-white text-black w-full"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0, transition: { delay: 0.3 } }}
+          transition={{ ease: "easeInOut", duration: 0.3 }}
+        >
+          {/* MENU ITEMS */}
+
           <motion.div
-            className="fixed right-0 top-0 h-full bg-white text-black w-full"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0, transition: { delay: 0.3 } }}
-            transition={{ ease: "easeInOut", duration: 0.3 }}
+            className="w-screen h-screen flex flex-col gap-6 items-center justify-center text-sm"
+            initial="hidden"
+            animate="visible"
+            viewport={{ once: true }}
+            variants={menuListAnimation}
           >
-            {/* MENU ITEMS */}
-            <LanguageMenu />
-            <AnimatePresence>
-              <motion.div
-                className="w-screen h-screen flex flex-col gap-6 items-center justify-center text-sm"
-                initial="hidden"
-                animate="visible"
-                viewport={{ once: true }}
-                variants={menuListAnimation}
-              >
-                <motion.div
-                  transition={{
-                    duration: 0.3,
-                    ease: [0.435, 0.135, 0.09, 0.83],
-                  }}
-                  variants={projectVariant}
-                >
-                  <Link href="/" onClick={() => setIsMenuToggled(false)}>
-                    {lang.menu_home}
-                  </Link>
-                </motion.div>
-                <motion.div
-                  transition={{
-                    duration: 0.3,
-                    ease: [0.435, 0.135, 0.09, 0.83],
-                  }}
-                  variants={projectVariant}
-                >
-                  <Link href="/works" onClick={() => setIsMenuToggled(false)}>
-                    {lang.menu_works}
-                  </Link>
-                </motion.div>
-                <motion.div
-                  transition={{
-                    duration: 0.3,
-                    ease: [0.435, 0.135, 0.09, 0.83],
-                  }}
-                  variants={projectVariant}
-                >
-                  <Link href="/about" onClick={() => setIsMenuToggled(false)}>
-                    {lang.menu_about}
-                  </Link>
-                </motion.div>
-                <motion.div
-                  transition={{
-                    duration: 0.3,
-                    ease: [0.435, 0.135, 0.09, 0.83],
-                  }}
-                  variants={projectVariant}
-                >
-                  <Link href="/contact" onClick={() => setIsMenuToggled(false)}>
-                    {lang.menu_contact}
-                  </Link>
-                </motion.div>
-              </motion.div>
-              
-            </AnimatePresence>
+            <motion.div
+              transition={{
+                duration: 0.3,
+                ease: [0.435, 0.135, 0.09, 0.83],
+              }}
+              variants={projectVariant}
+            >
+              <Link href="/" onClick={() => setIsMenuToggled(false)}>
+                {lang.menu_home}
+              </Link>
+            </motion.div>
+            <motion.div
+              transition={{
+                duration: 0.3,
+                ease: [0.435, 0.135, 0.09, 0.83],
+              }}
+              variants={projectVariant}
+            >
+              <Link href="/works" onClick={() => setIsMenuToggled(false)}>
+                {lang.menu_works}
+              </Link>
+            </motion.div>
+            <motion.div
+              transition={{
+                duration: 0.3,
+                ease: [0.435, 0.135, 0.09, 0.83],
+              }}
+              variants={projectVariant}
+            >
+              <Link href="/about" onClick={() => setIsMenuToggled(false)}>
+                {lang.menu_about}
+              </Link>
+            </motion.div>
+            <motion.div
+              transition={{
+                duration: 0.3,
+                ease: [0.435, 0.135, 0.09, 0.83],
+              }}
+              variants={projectVariant}
+            >
+              <Link href="/contact" onClick={() => setIsMenuToggled(false)}>
+                {lang.menu_contact}
+              </Link>
+            </motion.div>
           </motion.div>
-        )}
-      </AnimatePresence>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            transition={{
+              duration: 0.3,
+              delay: .8,
+              ease: [0.435, 0.135, 0.09, 0.83],
+            }}
+            variants={projectVariant}
+          >
+            <LanguageMenu />
+          </motion.div>
+        </motion.div>
+      )}
     </>
   );
 };

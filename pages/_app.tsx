@@ -7,7 +7,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
   return (
     <RecoilRoot>
       <Navbar>
-        <AnimatePresence mode="wait" initial={false}>
+        <AnimatePresence mode="wait" >
           <Component key={router.pathname} {...pageProps} />
         </AnimatePresence>
       </Navbar>
