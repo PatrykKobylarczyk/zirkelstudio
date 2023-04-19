@@ -30,9 +30,9 @@ const variants = {
 
 const PageTransitioning = () => {
   return (
-    <>
+    <div className="overflow-hidden">
       <motion.div
-        className="ios fixed left-0 w-full h-screen z-[9999] bg-black"
+        className="ios fixed left-0 w-full h-screen z-[9999] bg-[#DA0F40]"
         initial="initial"
         animate="animate"
         exit="exit"
@@ -40,11 +40,11 @@ const PageTransitioning = () => {
       />
       <motion.div
         variants={variants}
-        className="ios fixed -bottom-full left-0 w-full h-screen z-[9999] bg-black"
+        className="ios fixed -bottom-full left-0 w-full h-screen z-[9999] bg-[#DA0F40]"
         exit="exitStop"
        
       />
-    </>
+    </div>
   );
 };
 
