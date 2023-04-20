@@ -15,23 +15,22 @@ const item = {
 };
 
 const projectVariant = {
-  hidden: { y: 20, opacity: 0 },
+  hidden: { y: '100%', opacity: 0 },
   visible: { y: 0, opacity: 1 },
 };
 
 const Loader = () => {
-
   const [language] = useRecoilState(languageState);
 
-  const lang = language === "PL" ? lang_PL : language === "HR" ? lang_HR : lang_EN;
-
+  const lang =
+    language === "PL" ? lang_PL : language === "HR" ? lang_HR : lang_EN;
 
   return (
     <motion.div
       className="loader w-full h-screen grid place-items-center bg-white z-[200]"
       initial={{ opacity: 1 }}
       animate={{ opacity: 0 }}
-      transition={{ delay: 2.5, duration: 0.5 }}
+      transition={{ delay: 2.5, duration: 0.5, ease:[0.14, 0.99, 0.43, 1.01] }}
     >
       <motion.div
         initial="hidden"
@@ -46,24 +45,30 @@ const Loader = () => {
         }}
         className="flex flex-col items-center gap-5 text-black"
       >
-        <motion.div
-          transition={{
-            duration: 0.5,
-            ease: [0.435, 0.135, 0.09, 0.83],
-          }}
-          variants={projectVariant}
-        >
-          <h1 className="text-xl font-bold z-50 ml-4 md:ml-0">zirkelstudio<span className="text-bold text-[#DA0F40]">.</span></h1>
-        </motion.div>
-        <motion.div
-          transition={{
-            duration: 0.5,
-            ease: [0.435, 0.135, 0.09, 0.83],
-          }}
-          variants={projectVariant}
-        >
-          <p>{lang.loader}</p>
-        </motion.div>
+        <div className="overflow-hidden">
+          <motion.div
+            transition={{
+              duration: 0.5,
+              ease: [0.435, 0.135, 0.09, 0.83],
+            }}
+            variants={projectVariant}
+          >
+            <h1 className="text-xl font-bold z-50 ml-4 md:ml-0">
+              zirkelstudio<span className="text-bold text-[#DA0F40]">.</span>
+            </h1>
+          </motion.div>
+        </div>
+        <div className="overflow-hidden">
+          <motion.div
+            transition={{
+              duration: 0.5,
+              ease: [0.435, 0.135, 0.09, 0.83],
+            }}
+            variants={projectVariant}
+          >
+            <p>{lang.loader}</p>
+          </motion.div>
+        </div>
       </motion.div>
     </motion.div>
   );

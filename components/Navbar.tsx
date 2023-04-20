@@ -1,7 +1,6 @@
 import useMediaQuery from "@/hooks/useMediaQuery";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Squash as Hamburger } from "hamburger-react";
-import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 import Link from "next/link";
 // DATA
@@ -13,6 +12,8 @@ import { lang_HR } from "../data/LanguageData";
 import { useRecoilState } from "recoil";
 import { languageState } from "../atoms/atom";
 import LanguageMenu from "./LanguageMenu";
+import { useRouter } from "next/router";
+import SocialMedia from "./SocialMedia";
 
 const menuListAnimation = {
   hidden: {},
@@ -32,26 +33,60 @@ const projectVariant = {
 const Navbar = ({ children }: any) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const [isMenuToggled, setIsMenuToggled] = useState(false);
-
+  const router = useRouter();
   const [language] = useRecoilState(languageState);
 
   const lang =
     language === "PL" ? lang_PL : language === "HR" ? lang_HR : lang_EN;
+
+  useEffect(() => {
+    console.log(router.pathname);
+    console.log(lang_EN.menu_works);
+  }, [router.pathname]);
 
   return (
     <>
       <header className="fixed top-0 left-0 bg-white w-full h-24 z-50">
         <div className="w-screen h-full flex justify-between items-center px-5 md:px-20">
           <Link className="text-xl font-bold z-50 ml-4 md:ml-0" href={"/"}>
-            zirkelstudio<span className="text-bold text-[#DA0F40]">.</span>
+            zirkelstudio<span className="font-bold text-[#DA0F40]">.</span>
           </Link>
           {isAboveMediumScreens ? (
             <div className="flex gap-10 text-sm items-center">
-              <Link href="/">{lang.menu_home}</Link>
-              <Link href="/works">{lang.menu_works}</Link>
-              <Link href="/about">{lang.menu_about}</Link>
-              <Link href="/contact">{lang.menu_contact}</Link>
+              <Link
+                href="/"
+                className={`${
+                  router.pathname === "/" && "font-bold text-[#DA0F40]"
+                }`}
+              >
+                {lang.menu_home}
+              </Link>
+              <Link
+                href="/works"
+                className={`${
+                  router.pathname === "/works" && "font-bold text-[#DA0F40]"
+                }`}
+              >
+                {lang.menu_works}
+              </Link>
+              <Link
+                href="/about"
+                className={`${
+                  router.pathname === "/about" && "font-bold text-[#DA0F40]"
+                }`}
+              >
+                {lang.menu_about}
+              </Link>
+              <Link
+                href="/contact"
+                className={`${
+                  router.pathname === "/contact" && "font-bold text-[#DA0F40]"
+                }`}
+              >
+                {lang.menu_contact}
+              </Link>
               <LanguageMenu />
+              <SocialMedia />
             </div>
           ) : (
             <div className="">
@@ -135,13 +170,16 @@ const Navbar = ({ children }: any) => {
             animate="visible"
             transition={{
               duration: 0.3,
-              delay: .8,
+              delay: 0.8,
               ease: [0.435, 0.135, 0.09, 0.83],
             }}
             variants={projectVariant}
           >
-            <LanguageMenu />
           </motion.div>
+            <div className="absolute bottom-0 w-full h-20 px-8 flex justify-between items-center">
+              <SocialMedia />
+              <LanguageMenu />
+            </div>
         </motion.div>
       )}
     </>

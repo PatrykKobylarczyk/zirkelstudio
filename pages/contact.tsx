@@ -20,27 +20,40 @@ const Contact = () => {
   return (
     <>
       <PageTransitioning />
-      <main className="w-full md:h-screen md:mt-24 flex flex-col justify-center items-center gap-3 md:gap-12 px-5">
+      <main className="w-full md:h-screen flex flex-col justify-center items-center gap-3 md:gap-12 px-5 py-24">
         <div className="text-sm md:text-lg font-bold text-center">
-          <p>Have a question? Just want to say hi?</p>
-          <p>Please use the box below.</p>
+          <div className="overflow-hidden">
+            <motion.p
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              transition={{ duration: 0.75, delay: 0.2, ease:[0.14, 0.99, 0.43, 1.01] }}
+            >
+              Have a question? Just want to say hi?
+            </motion.p>
+          </div>
+          <div className="overflow-hidden">
+            <motion.p
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              transition={{ duration: 0.75, delay: 0.5, ease:[0.14, 0.99, 0.43, 1.01] }}
+            >
+              Please use the box below
+              <span className="font-bold text-[#DA0F40]">.</span>
+            </motion.p>
+          </div>
         </div>
         <motion.div
           className="basis-1/2 mt-10 md:mt-0"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
-          variants={{
-            hidden: { opacity: 0, x: 50 },
-            visible: { opacity: 1, x: 0 },
-          }}
+          initial={{ opacity: 0, x: -40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 1.2, duration: 0.5, ease:[0.14, 0.99, 0.43, 1.01] }}
         >
           <form
             target="_blank"
             onSubmit={onSubmit}
             action="https://formsubmit.co/patrykkobylarczyk@gmail.com"
             method="POST"
+            className="flex flex-col justify-end"
           >
             <input
               className="w-full text-xs placeholder-gray-500 p-4 border-[1px] border-b-0 border-gray-500 focus:border-none rounded-none"
@@ -72,7 +85,7 @@ const Contact = () => {
             <textarea
               className="w-full text-xs placeholder-gray-500 p-4 border-[1px] border-gray-500 rounded-none"
               placeholder="Message"
-              rows={10}
+              rows={5}
               cols={50}
               {...register("message", {
                 required: true,
@@ -89,12 +102,15 @@ const Contact = () => {
               </p>
             )}
 
-            <button
-              className="py-4 px-8 mt-2 text-xs placeholder-gray-500 hover:bg-gray-100 transition duration-300 border-[1px]  border-gray-500 rounded-none"
+            <motion.button
+              className="self-end py-4 px-8 mt-2 text-xs placeholder-gray-500 hover:bg-gray-100 transition duration-300 border-[1px]  border-gray-500 rounded-none"
               type="submit"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1.8, duration: 0.5, ease:[0.14, 0.99, 0.43, 1.01] }}
             >
               Send Message
-            </button>
+            </motion.button>
           </form>
         </motion.div>
       </main>

@@ -24,8 +24,19 @@ const About = () => {
       <PageTransitioning />
       <div className="py-24 w-full h-screen grid place-items-center ">
         <div className="flex flex-col items-center px-5 md:flex-row md:w-[60vw] gap-16 md:gap-24">
-          <div className="w-full md:w-5/12 h-auto">
-            <Image src={profile} alt="Patryk Kobylarczyk" priority />
+          <div className=" w-full md:w-5/12 h-auto overflow-hidden">
+            <motion.div
+              className="w-full h-full"
+              initial={{ x: "-100%" }}
+              animate={{ x: 0 }}
+              transition={{
+                duration: 0.75,
+                delay: 0.3,
+                ease: [.87,.03,.12,1],
+              }}
+            >
+              <Image src={profile} alt="Patryk Kobylarczyk" priority />
+            </motion.div>
           </div>
           <div className="w-full md:w-7/12 flex flex-col gap-5 justify-center p-5">
             <div className="overflow-hidden">
@@ -33,7 +44,8 @@ const About = () => {
                 className="text-3xl font-bold"
                 initial={{ y: "100%" }}
                 whileInView={{ y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.75, delay: 0.3, ease:[0.14, 0.99, 0.43, 1.01] }}
               >
                 {lang.about_hello}
                 <span className="text-bold text-[#DA0F40]">.</span>
@@ -42,41 +54,46 @@ const About = () => {
             <motion.p
               initial={{ y: 40, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: .6 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.75, delay: 0.8, ease:[0.14, 0.99, 0.43, 1.01] }}
             >
               {lang.about_par1}
             </motion.p>
             <motion.p
               initial={{ y: 40, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: .8 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.75, delay: 1, ease:[0.14, 0.99, 0.43, 1.01] }}
             >
               {lang.about_par2}
             </motion.p>
             <motion.p
               initial={{ y: 40, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.75, delay: 1.2, ease:[0.14, 0.99, 0.43, 1.01] }}
             >
               {lang.about_par3}
             </motion.p>
             <motion.p
               initial={{ y: 40, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 1.2 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.75, delay: 1.4, ease:[0.14, 0.99, 0.43, 1.01] }}
             >
               {lang.about_par4}
             </motion.p>
             <motion.p
               initial={{ y: 40, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 1.4 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.75, delay: 1.6, ease:[0.14, 0.99, 0.43, 1.01] }}
             >
               {lang.about_par5}
             </motion.p>
           </div>
+          <div className="pb-10 md:hidden"></div>
         </div>
-        <div className="w-full h-24"/>
       </div>
     </>
   );
