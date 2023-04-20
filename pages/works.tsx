@@ -56,7 +56,7 @@ const Works = () => {
   return (
     <>
       <PageTransitioning />
-      <div className="w-[95vw]  m-auto mt-24">
+      <div className="w-[95vw]  m-auto mt-24" data-scroll-section>
         <div className="grid place-items-center grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2 sm:gap-5">
           {images.map((image, i) => (
             <motion.div key={i} onClick={() => handleOpenModal(i)}>

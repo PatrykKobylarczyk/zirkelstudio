@@ -22,7 +22,10 @@ const About = () => {
   return (
     <>
       <PageTransitioning />
-      <div className="py-24 w-full h-screen grid place-items-center ">
+      <div
+        className="py-24 w-full h-screen grid place-items-center "
+       
+      >
         <div className="flex flex-col items-center px-5 md:flex-row md:w-[60vw] gap-16 md:gap-24">
           <div className=" w-full md:w-5/12 h-auto overflow-hidden">
             <motion.div
@@ -32,7 +35,7 @@ const About = () => {
               transition={{
                 duration: 0.75,
                 delay: 0.3,
-                ease: [.87,.03,.12,1],
+                ease: [0.87, 0.03, 0.12, 1],
               }}
             >
               <Image src={profile} alt="Patryk Kobylarczyk" priority />
@@ -45,7 +48,11 @@ const About = () => {
                 initial={{ y: "100%" }}
                 whileInView={{ y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.75, delay: 0.3, ease:[0.14, 0.99, 0.43, 1.01] }}
+                transition={{
+                  duration: 0.75,
+                  delay: 0.3,
+                  ease: [0.14, 0.99, 0.43, 1.01],
+                }}
               >
                 {lang.about_hello}
                 <span className="text-bold text-[#DA0F40]">.</span>
@@ -55,7 +62,11 @@ const About = () => {
               initial={{ y: 40, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.75, delay: 0.8, ease:[0.14, 0.99, 0.43, 1.01] }}
+              transition={{
+                duration: 0.75,
+                delay: 0.8,
+                ease: [0.14, 0.99, 0.43, 1.01],
+              }}
             >
               {lang.about_par1}
             </motion.p>
@@ -63,7 +74,11 @@ const About = () => {
               initial={{ y: 40, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.75, delay: 1, ease:[0.14, 0.99, 0.43, 1.01] }}
+              transition={{
+                duration: 0.75,
+                delay: 1,
+                ease: [0.14, 0.99, 0.43, 1.01],
+              }}
             >
               {lang.about_par2}
             </motion.p>
@@ -71,7 +86,11 @@ const About = () => {
               initial={{ y: 40, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.75, delay: 1.2, ease:[0.14, 0.99, 0.43, 1.01] }}
+              transition={{
+                duration: 0.75,
+                delay: 1.2,
+                ease: [0.14, 0.99, 0.43, 1.01],
+              }}
             >
               {lang.about_par3}
             </motion.p>
@@ -79,7 +98,11 @@ const About = () => {
               initial={{ y: 40, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.75, delay: 1.4, ease:[0.14, 0.99, 0.43, 1.01] }}
+              transition={{
+                duration: 0.75,
+                delay: 1.4,
+                ease: [0.14, 0.99, 0.43, 1.01],
+              }}
             >
               {lang.about_par4}
             </motion.p>
@@ -87,7 +110,11 @@ const About = () => {
               initial={{ y: 40, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.75, delay: 1.6, ease:[0.14, 0.99, 0.43, 1.01] }}
+              transition={{
+                duration: 0.75,
+                delay: 1.6,
+                ease: [0.14, 0.99, 0.43, 1.01],
+              }}
             >
               {lang.about_par5}
             </motion.p>

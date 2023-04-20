@@ -40,7 +40,7 @@ export const lang_PL = {
   about_hello: "Cześć",
   about_par1: `Mam na imię Patryk. Nigdy nie wspiąłem się na Everest, nie miażdżyłem samochodów monster truckiem ani nie mieszkałem na Bali (może w przyszłym roku).`,
   about_par2: `W tym życiu poślubiłem tę jedyną, stworzyłem drugą na jej podobieństwo, chciałbym mieszkać w Chorwacji, żeglować, codziennie jeść ryby i tworzyć czyste, światowej klasy zdjęcia dla moich klientów.`,
-  about_par3: `Interesuje się tworzeniem stron internetowych i podróżowaniem.`,
+  about_par3: `Interesuję się tworzeniem stron internetowych i podróżowaniem.`,
   about_par4: `rozmiar stopy: 44`,
   about_par5: `Przejdź do strony kontaktowej, byśmy mogli porozmawiać o rozpoczęciu wspólnego projektu!`,
 };
