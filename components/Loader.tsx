@@ -53,8 +53,7 @@ const Loader = () => {
             }}
             variants={projectVariant}
           >
-            <h1 className="text-xl font-bold z-50 ml-4 md:ml-0">
-              zirkelstudio<span className="text-bold text-[#DA0F40]">.</span>
+            <h1 className="text-xl font-bold z-50 ml-4 md:ml-0">zirkelstudio<span className="text-bold text-[#DA0F40]">.</span>
             </h1>
           </motion.div>
         </div>
