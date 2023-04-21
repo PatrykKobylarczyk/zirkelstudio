@@ -1,4 +1,4 @@
-# Personal Website for Real Estate Photographer built with Next.js
+# Website for Real Estate Photographer built with Next.js
 
 ## Description
 My hobby is Real Estate Photography and I want to share my work.
