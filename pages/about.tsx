@@ -3,6 +3,9 @@ import React from "react";
 import profile from "../assets/profile2.jpg";
 import { motion } from "framer-motion";
 
+//COMPONENTS
+import PageTransitioning from "@/components/PageTransitioning";
+
 // DATA
 import { lang_EN } from "../data/LanguageData";
 import { lang_PL } from "../data/LanguageData";
@@ -11,7 +14,6 @@ import { lang_HR } from "../data/LanguageData";
 // STATE
 import { useRecoilState } from "recoil";
 import { languageState } from "../atoms/atom";
-import PageTransitioning from "@/components/PageTransitioning";
 
 const About = () => {
   const [language] = useRecoilState(languageState);
@@ -22,10 +24,7 @@ const About = () => {
   return (
     <>
       <PageTransitioning />
-      <div
-        className="py-24 w-full h-screen grid place-items-center "
-       
-      >
+      <div className="py-24 w-full h-screen grid place-items-center ">
         <div className="flex flex-col items-center px-5 md:flex-row md:w-[60vw] gap-16 md:gap-24">
           <div className=" w-full md:w-5/12 h-auto overflow-hidden">
             <motion.div

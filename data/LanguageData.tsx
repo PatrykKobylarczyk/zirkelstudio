@@ -29,6 +29,7 @@ export const lang_HR = {
   about_par4: `veličina stopala: 44`,
   about_par5: `Idite na kontakt stranicu pa možemo razgovarati o zajedničkoj suradnji!`,
 };
+
 export const lang_PL = {
   language: "PL",
   menu_home: "Home",

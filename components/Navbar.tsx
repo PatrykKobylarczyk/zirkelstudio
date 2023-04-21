@@ -1,8 +1,11 @@
-import useMediaQuery from "@/hooks/useMediaQuery";
 import React, { useEffect, useState } from "react";
-import { Squash as Hamburger } from "hamburger-react";
-import { motion } from "framer-motion";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { Squash as Hamburger } from "hamburger-react";
+
+//HOOKS
+import useMediaQuery from "@/hooks/useMediaQuery";
+
 // DATA
 import { lang_EN } from "../data/LanguageData";
 import { lang_PL } from "../data/LanguageData";
@@ -33,16 +36,10 @@ const projectVariant = {
 const Navbar = ({ children }: any) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const [isMenuToggled, setIsMenuToggled] = useState(false);
-  const router = useRouter();
   const [language] = useRecoilState(languageState);
+  const router = useRouter();
 
-  const lang =
-    language === "PL" ? lang_PL : language === "HR" ? lang_HR : lang_EN;
-
-  useEffect(() => {
-    console.log(router.pathname);
-    console.log(lang_EN.menu_works);
-  }, [router.pathname]);
+  const lang = language === "PL" ? lang_PL : language === "HR" ? lang_HR : lang_EN;
 
   return (
     <>
@@ -174,12 +171,11 @@ const Navbar = ({ children }: any) => {
               ease: [0.435, 0.135, 0.09, 0.83],
             }}
             variants={projectVariant}
-          >
-          </motion.div>
-            <div className="absolute bottom-0 w-full h-20 px-8 flex justify-between items-center">
-              <SocialMedia />
-              <LanguageMenu />
-            </div>
+          ></motion.div>
+          <div className="absolute bottom-0 w-full h-20 px-8 flex justify-between items-center">
+            <SocialMedia />
+            <LanguageMenu />
+          </div>
         </motion.div>
       )}
     </>

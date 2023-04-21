@@ -1,8 +1,8 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
-const Thumbnail = ({ image, i }: any) => {
+const Thumbnail = ({ image }: any) => {
   return (
     <button className="md:aspect-[4/3] transition duration-200 ease-out md:hover:scale-[1.02] cursor-pointer z-10 overflow-hidden">
       <motion.div

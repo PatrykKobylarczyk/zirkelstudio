@@ -1,14 +1,18 @@
 import React, { useState } from "react";
-import { images } from "@/data/ImageData";
-import { motion } from "framer-motion";
-import Thumbnail from "@/components/Thumbnail";
-import { Modal } from "@mui/material";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { Modal } from "@mui/material";
+
+//COMPONENTS
+import Thumbnail from "@/components/Thumbnail";
 import { MdWest, MdEast } from "react-icons/md";
+import PageTransitioning from "@/components/PageTransitioning";
+
+//DATA
+import { images } from "@/data/ImageData";
 
 //HOOKS
 import useMediaQuery from "../hooks/useMediaQuery";
-import PageTransitioning from "@/components/PageTransitioning";
 
 const style = {
   position: "absolute" as "absolute",
@@ -45,7 +49,7 @@ const Works = () => {
     }
   };
 
-  const handleKeyDown = (event: any) => {
+  const handleKeyDown = (event: React.KeyboardEvent) => {
     if (event.keyCode === 37) {
       handlePrevImage();
     } else if (event.keyCode === 39) {

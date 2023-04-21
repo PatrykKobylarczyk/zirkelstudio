@@ -1,6 +1,8 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
+
+//COMPONENTS
 import PageTransitioning from "@/components/PageTransitioning";
 
 const Contact = () => {
@@ -10,7 +12,7 @@ const Contact = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = async (event: any) => {
+  const onSubmit = async (event: React.FormEvent) => {
     const isValid = await trigger();
     if (!isValid) {
       event.preventDefault();
@@ -103,7 +105,7 @@ const Contact = () => {
             )}
 
             <motion.button
-              className="self-end py-4 px-8 mt-2 text-xs placeholder-gray-500 hover:bg-gray-100 transition duration-300 border-[1px]  border-gray-500 rounded-none"
+              className="self-end py-4 px-8 mt-3 md:mt-6 text-xs placeholder-gray-500 hover:bg-gray-100 transition duration-300 border-[1px]  border-gray-500 rounded-none"
               type="submit"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+
 // DATA
 import { lang_EN } from "../data/LanguageData";
 import { lang_PL } from "../data/LanguageData";

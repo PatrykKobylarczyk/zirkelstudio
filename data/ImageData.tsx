@@ -39,182 +39,146 @@ export const images = [
   {
     id: 0,
     path: photo00,
-    alt: "real estate photo",
   },
   {
     id: 1,
     path: photo01,
-    alt: "real estate photo",
   },
   {
     id: 2,
     path: photo02,
-    alt: "real estate photo",
   },
   {
     id: 3,
     path: photo03,
-    alt: "real estate photo",
   },
   {
     id: 4,
     path: photo04,
-    alt: "real estate photo",
   },
   {
     id: 5,
     path: photo05,
-    alt: "real estate photo",
   },
   {
     id: 6,
     path: photo06,
-    alt: "real estate photo",
   },
   {
     id: 7,
     path: photo07,
-    alt: "real estate photo",
   },
   {
     id: 8,
     path: photo08,
-    alt: "real estate photo",
   },
   {
     id: 9,
     path: photo09,
-    alt: "real estate photo",
   },
   {
     id: 10,
     path: photo10,
-    alt: "real estate photo",
   },
   {
     id: 11,
     path: photo11,
-    alt: "real estate photo",
   },
   {
     id: 12,
     path: photo12,
-    alt: "real estate photo",
   },
   {
     id: 13,
     path: photo13,
-    alt: "real estate photo",
   },
   {
     id: 14,
     path: photo14,
-    alt: "real estate photo",
   },
   {
     id: 15,
     path: photo15,
-    alt: "real estate photo",
   },
   {
     id: 16,
     path: photo16,
-    alt: "real estate photo",
   },
   {
     id: 17,
     path: photo17,
-    alt: "real estate photo",
   },
   {
     id: 18,
     path: photo18,
-    alt: "real estate photo",
   },
   {
     id: 20,
     path: photo20,
-    alt: "real estate photo",
   },
   {
     id: 21,
     path: photo21,
-    alt: "real estate photo",
   },
   {
     id: 22,
     path: photo22,
-    alt: "real estate photo",
   },
   {
     id: 23,
     path: photo23,
-    alt: "real estate photo",
   },
   {
     id: 24,
     path: photo24,
-    alt: "real estate photo",
   },
   {
     id: 25,
     path: photo25,
-    alt: "real estate photo",
   },
   {
     id: 26,
     path: photo26,
-    alt: "real estate photo",
   },
   {
     id: 27,
     path: photo27,
-    alt: "real estate photo",
   },
   {
     id: 28,
     path: photo28,
-    alt: "real estate photo",
   },
   {
     id: 29,
     path: photo29,
-    alt: "real estate photo",
   },
   {
     id: 30,
     path: photo30,
-    alt: "real estate photo",
   },
   {
     id: 31,
     path: photo31,
-    alt: "real estate photo",
   },
   {
     id: 32,
     path: photo32,
-    alt: "real estate photo",
   },
   {
     id: 33,
     path: photo33,
-    alt: "real estate photo",
   },
   {
     id: 34,
     path: photo34,
-    alt: "real estate photo",
   },
   {
     id: 35,
     path: photo35,
-    alt: "real estate photo",
   },
   {
     id: 37,
     path: photo37,
-    alt: "real estate photo",
   },
 ];
 
