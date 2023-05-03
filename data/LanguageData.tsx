@@ -41,7 +41,7 @@ export const lang_ES = {
   about_par1: `Mi nombre es Patryk. Nunca escalé el Everest, aplasté autos con un camión monstruo o viví en Bali (tal vez el próximo año)`,
   about_par2: `En esta vida, me casé con una, creé otra a su semejanza, me gustaría vivir en Croacia, navegar, comer pescado todos los días y crear fotos limpias y de clase mundial para mis clientes.`,
   about_par3: `Estoy interesado en crear sitios web y viajar.`,
-  about_par4: `tamaño del pie: 44`,
+  about_par4: `Tamaño del pie: 44`,
   about_par5: `¡Ve a la página de contacto para que podamos hablar sobre cómo iniciar un proyecto conjunto!`,
 };
 
