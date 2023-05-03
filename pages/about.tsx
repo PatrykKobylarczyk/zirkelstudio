@@ -10,6 +10,8 @@ import PageTransitioning from "@/components/PageTransitioning";
 import { lang_EN } from "../data/LanguageData";
 import { lang_PL } from "../data/LanguageData";
 import { lang_HR } from "../data/LanguageData";
+import { lang_DE } from "../data/LanguageData";
+import { lang_ES } from "../data/LanguageData";
 
 // STATE
 import { useRecoilState } from "recoil";
@@ -18,8 +20,7 @@ import { languageState } from "../atoms/atom";
 const About = () => {
   const [language] = useRecoilState(languageState);
 
-  const lang =
-    language === "PL" ? lang_PL : language === "HR" ? lang_HR : lang_EN;
+  const lang = language === "ES" ? lang_ES : language === "DE" ? lang_DE : lang_EN;
 
   return (
     <>
@@ -54,7 +55,7 @@ const About = () => {
                 }}
               >
                 {lang.about_hello}
-                <span className="text-bold text-[#DA0F40]">.</span>
+                <span className="text-bold text-[#DA0F40]">{language === 'ES' ? '!' : '.'}</span>
               </motion.h2>
             </div>
             <motion.p

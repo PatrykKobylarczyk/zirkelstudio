@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { lang_EN } from "../data/LanguageData";
 import { lang_PL } from "../data/LanguageData";
 import { lang_HR } from "../data/LanguageData";
+import { lang_ES } from "../data/LanguageData";
+import { lang_DE } from "../data/LanguageData";
 
 // STATE
 import { useRecoilState } from "recoil";
@@ -23,8 +25,7 @@ const projectVariant = {
 const Loader = () => {
   const [language] = useRecoilState(languageState);
 
-  const lang =
-    language === "PL" ? lang_PL : language === "HR" ? lang_HR : lang_EN;
+  const lang = language === "ES" ? lang_ES : language === "DE" ? lang_DE : lang_EN;
 
   return (
     <motion.div

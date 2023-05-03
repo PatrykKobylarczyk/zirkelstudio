@@ -10,6 +10,8 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 import { lang_EN } from "../data/LanguageData";
 import { lang_PL } from "../data/LanguageData";
 import { lang_HR } from "../data/LanguageData";
+import { lang_DE } from "../data/LanguageData";
+import { lang_ES } from "../data/LanguageData";
 
 // STATE
 import { useRecoilState } from "recoil";
@@ -39,7 +41,7 @@ const Navbar = ({ children }: any) => {
   const [language] = useRecoilState(languageState);
   const router = useRouter();
 
-  const lang = language === "PL" ? lang_PL : language === "HR" ? lang_HR : lang_EN;
+  const lang = language === "ES" ? lang_ES : language === "DE" ? lang_DE : lang_EN;
 
   return (
     <>

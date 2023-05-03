@@ -29,6 +29,37 @@ export const lang_HR = {
   about_par4: `veličina stopala: 44`,
   about_par5: `Idite na kontakt stranicu pa možemo razgovarati o zajedničkoj suradnji!`,
 };
+export const lang_ES = {
+  language: "ES",
+  menu_home: "Inicio",
+  menu_works: "Portfolio",
+  menu_about: "Autor",
+  menu_contact: "Contacto",
+  menu_language: "Lengua: ",
+  loader: "Fotografía inmobiliaria",
+  about_hello: "¡Hola",
+  about_par1: `Mi nombre es Patryk. Nunca escalé el Everest, aplasté autos con un camión monstruo o viví en Bali (tal vez el próximo año)`,
+  about_par2: `En esta vida, me casé con una, creé otra a su semejanza, me gustaría vivir en Croacia, navegar, comer pescado todos los días y crear fotos limpias y de clase mundial para mis clientes.`,
+  about_par3: `Estoy interesado en crear sitios web y viajar.`,
+  about_par4: `tamaño del pie: 44`,
+  about_par5: `¡Ve a la página de contacto para que podamos hablar sobre cómo iniciar un proyecto conjunto!`,
+};
+
+export const lang_DE = {
+  language: "DE",
+  menu_home: "Home",
+  menu_works: "Portfolio",
+  menu_about: "About",
+  menu_contact: "Kontakt",
+  menu_language: "Sprache: ",
+  loader: "Immobilien Fotografie",
+  about_hello: "Servus",
+  about_par1: `Mein Name ist Patrik. Ich habe noch nie den Everest bestiegen, Autos mit einem Monstertruck zerquetscht oder auf Bali gelebt (vielleicht nächstes Jahr).`,
+  about_par2: `In diesem Leben habe ich die eine geheiratet, eine andere in ihrem Ebenbild geschaffen, ich möchte in Kroatien leben, segeln, jeden Tag Fisch essen und saubere, erstklassige Fotos für meine Kunden erstellen.`,
+  about_par3: `Ich interessiere mich für das Erstellen von Websites und Reisen.`,
+  about_par4: `Fußgröße: 44`,
+  about_par5: `Gehen Sie zur Kontaktseite, damit wir über den Start eines gemeinsamen Projekts sprechen können!`,
+};
 
 export const lang_PL = {
   language: "PL",

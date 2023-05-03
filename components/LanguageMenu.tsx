@@ -10,10 +10,10 @@ const LanguageMenu = () => {
   return (
     <div className="flex gap-5 lg:gap-2 text-xs">
       <button
-        className={`${language === "PL" && "font-bold text-[#DA0F40]"}`}
-        onClick={() => setLanguage("PL")}
+        className={`${language === "ES" && "font-bold text-[#DA0F40]"}`}
+        onClick={() => setLanguage("ES")}
       >
-        PL
+        ES
       </button>
       <button
         className={`${language === "EN" && "font-bold text-[#DA0F40]"}`}
@@ -22,10 +22,10 @@ const LanguageMenu = () => {
         EN
       </button>
       <button
-        className={`${language === "HR" && "font-bold text-[#DA0F40]"}`}
-        onClick={() => setLanguage("HR")}
+        className={`${language === "DE" && "font-bold text-[#DA0F40]"}`}
+        onClick={() => setLanguage("DE")}
       >
-        HR
+        DE
       </button>
     </div>
   );
