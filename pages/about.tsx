@@ -20,7 +20,7 @@ import { languageState } from "../atoms/atom";
 const About = () => {
   const [language] = useRecoilState(languageState);
 
-  const lang = language === "ES" ? lang_ES : language === "DE" ? lang_DE : lang_EN;
+  const lang = language === "ES" ? lang_ES : language === "DE" ? lang_DE : language === "HR" ? lang_HR : lang_EN;
 
   return (
     <>

@@ -18,21 +18,28 @@ const item = {
 };
 
 const projectVariant = {
-  hidden: { y: '100%', opacity: 0 },
+  hidden: { y: "100%", opacity: 0 },
   visible: { y: 0, opacity: 1 },
 };
 
 const Loader = () => {
   const [language] = useRecoilState(languageState);
 
-  const lang = language === "ES" ? lang_ES : language === "DE" ? lang_DE : lang_EN;
+  const lang =
+    language === "ES"
+      ? lang_ES
+      : language === "DE"
+      ? lang_DE
+      : language === "HR"
+      ? lang_HR
+      : lang_EN;
 
   return (
     <motion.div
       className="loader w-full h-screen grid place-items-center bg-white z-[200]"
       initial={{ opacity: 1 }}
       animate={{ opacity: 0 }}
-      transition={{ delay: 2.5, duration: 0.5, ease:[0.14, 0.99, 0.43, 1.01] }}
+      transition={{ delay: 2.5, duration: 0.5, ease: [0.14, 0.99, 0.43, 1.01] }}
     >
       <motion.div
         initial="hidden"
@@ -55,7 +62,8 @@ const Loader = () => {
             }}
             variants={projectVariant}
           >
-            <h1 className="text-xl font-bold z-50 ml-4 md:ml-0">zirkelstudio<span className="text-bold text-[#DA0F40]">.</span>
+            <h1 className="text-xl font-bold z-50 ml-4 md:ml-0">
+              zirkelstudio<span className="text-bold text-[#DA0F40]">.</span>
             </h1>
           </motion.div>
         </div>

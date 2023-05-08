@@ -27,6 +27,12 @@ const LanguageMenu = () => {
       >
         DE
       </button>
+      <button
+        className={`${language === "HR" && "font-bold text-[#DA0F40]"}`}
+        onClick={() => setLanguage("HR")}
+      >
+        HR
+      </button>
     </div>
   );
 };
