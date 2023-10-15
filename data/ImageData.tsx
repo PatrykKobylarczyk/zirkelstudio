@@ -234,6 +234,11 @@ export const homeImages = [
     alt: "real estate photo",
   },
   {
+    id: 41,
+    path: photo001,
+    alt: "real estate photo",
+  },
+  {
     id: 1,
     path: photo01,
     alt: "real estate photo",
@@ -256,6 +261,10 @@ export const homeImages = [
   {
     id: 3,
     path: photo03,
+    alt: "real estate photo",
+  },{
+    id: 44,
+    path: photo004,
     alt: "real estate photo",
   },
 ];
