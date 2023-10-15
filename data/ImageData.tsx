@@ -4,7 +4,7 @@ import photo001 from "../assets/001.jpg";
 import photo02 from "../assets/02.jpg";
 import photo03 from "../assets/03.jpg";
 import photo04 from "../assets/04.jpg";
-import photo004 from "../assets/004.jpg";
+import photo004 from "../assets/041.jpg";
 import photo05 from "../assets/05.jpg";
 import photo06 from "../assets/06.jpg";
 import photo061 from "../assets/061.jpg";
