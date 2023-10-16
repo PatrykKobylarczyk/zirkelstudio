@@ -67,7 +67,7 @@ const Contact = () => {
                 ease: [0.14, 0.99, 0.43, 1.01],
               }}
             >
-              {lang.contact_message}
+              {lang.contact_text}
               <span className="font-bold text-[#DA0F40]">.</span>
             </motion.p>
           </div>
