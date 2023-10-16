@@ -167,7 +167,7 @@ const Contact = () => {
                 ease: [0.14, 0.99, 0.43, 1.01],
               }}
             >
-              Send Message
+              {lang.con}
             </motion.button>
           </form>
         </motion.div>
