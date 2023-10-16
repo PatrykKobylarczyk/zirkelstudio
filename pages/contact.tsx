@@ -23,32 +23,67 @@ const Contact = () => {
     <>
       <PageTransitioning />
       <main className="w-full md:h-screen flex flex-col justify-center items-center gap-3 md:gap-12 px-5 py-24">
-        <div className="text-sm md:text-lg font-bold text-center">
-          <div className="overflow-hidden">
+        <div className="w-full md:w-1/2">
+          <div className="overflow-hidden text-sm md:text-xl mb-2">
             <motion.p
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
-              transition={{ duration: 0.75, delay: 0.2, ease:[0.14, 0.99, 0.43, 1.01] }}
+              transition={{
+                duration: 0.75,
+                delay: 0.2,
+                ease: [0.14, 0.99, 0.43, 1.01],
+              }}
             >
-              Have a question? Just want to say hi?
+              KONTAKT
             </motion.p>
           </div>
-          <div className="overflow-hidden">
+          <div className="overflow-hidden font-light text-xs md:text-sm">
             <motion.p
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
-              transition={{ duration: 0.75, delay: 0.5, ease:[0.14, 0.99, 0.43, 1.01] }}
+              transition={{
+                duration: 0.75,
+                delay: 0.5,
+                ease: [0.14, 0.99, 0.43, 1.01],
+              }}
             >
-              Please use the box below
+              Jeśli masz pytania lub po prostu chcesz powiedzieć "cześć" napisz
+              śmiało
               <span className="font-bold text-[#DA0F40]">.</span>
             </motion.p>
           </div>
+          <div className="overflow-hidden font-light text-xs md:text-sm mt-3 flex flex-col">
+            <motion.div
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              transition={{
+                duration: 0.75,
+                delay: 0.5,
+                ease: [0.14, 0.99, 0.43, 1.01],
+              }}
+            >
+              <p className="my-3">PATRYK KOBYLARCZYK</p>
+              <a href="tel://+48789985677" className="block font-semibold">
+                +48 789 985 677
+              </a>
+              <a
+                href="mailto:patryk.kobylarczyk@gmail.co"
+                className="block mt-2 font-semibold"
+              >
+                patryk.kobylarczyk@gmail.com
+              </a>
+            </motion.div>
+          </div>
         </div>
         <motion.div
-          className="basis-1/2 mt-10 md:mt-0"
+          className="w-full md:w-1/2 mt-10 md:mt-0"
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 1.2, duration: 0.5, ease:[0.14, 0.99, 0.43, 1.01] }}
+          transition={{
+            delay: 1.2,
+            duration: 0.5,
+            ease: [0.14, 0.99, 0.43, 1.01],
+          }}
         >
           <form
             target="_blank"
@@ -58,7 +93,7 @@ const Contact = () => {
             className="flex flex-col justify-end"
           >
             <input
-              className="w-full text-xs placeholder-gray-500 p-4 border-[1px] border-b-0 border-gray-500 focus:border-none rounded-none"
+              className="w-full text-xs placeholder-gray-500 p-4 border-[1px] border-transparent border-b-gray-500 hover:border-[1px] hover:border-gray-500 focus:border-none rounded-none"
               type="text"
               placeholder="Name"
               {...register("name", {
@@ -67,9 +102,7 @@ const Contact = () => {
             />
 
             <input
-              className={`w-full text-xs placeholder-gray-500 p-4 border-[1px] ${
-                errors.email ? "" : "border-b-0"
-              } border-gray-500 rounded-none`}
+              className={`w-full text-xs placeholder-gray-500 p-4 border-[1px] border-transparent border-b-gray-500 hover:border-[1px] hover:border-t-transparent hover:border-gray-500 rounded-none`}
               type="text"
               placeholder="Email"
               {...register("email", {
@@ -85,7 +118,7 @@ const Contact = () => {
             )}
 
             <textarea
-              className="w-full text-xs placeholder-gray-500 p-4 border-[1px] border-gray-500 rounded-none"
+              className="w-full text-xs placeholder-gray-500 p-4 border-[1px] border-transparent border-b-gray-500 hover:border-[1px] hover:border-gray-500 hover:border-t-transparent rounded-none"
               placeholder="Message"
               rows={5}
               cols={50}
@@ -109,7 +142,11 @@ const Contact = () => {
               type="submit"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1.8, duration: 0.5, ease:[0.14, 0.99, 0.43, 1.01] }}
+              transition={{
+                delay: 1.8,
+                duration: 0.5,
+                ease: [0.14, 0.99, 0.43, 1.01],
+              }}
             >
               Send Message
             </motion.button>

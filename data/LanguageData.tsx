@@ -14,6 +14,7 @@ export const lang_EN = {
   about_par5: `Head over to the contact page so we can talk about shooting your next project!`,
 };
 
+
 export const lang_HR = {
   language: "HR",
   menu_home: "Početna",
