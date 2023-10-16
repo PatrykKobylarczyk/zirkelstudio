@@ -5,7 +5,27 @@ import { motion } from "framer-motion";
 //COMPONENTS
 import PageTransitioning from "@/components/PageTransitioning";
 
+// DATA
+import { lang_EN } from "../data/LanguageData";
+import { lang_PL } from "../data/LanguageData";
+import { lang_DE } from "../data/LanguageData";
+import { lang_ES } from "../data/LanguageData";
+
+// STATE
+import { useRecoilState } from "recoil";
+import { languageState } from "../atoms/atom";
+
 const Contact = () => {
+  const [language] = useRecoilState(languageState);
+  const lang =
+    language === "ES"
+      ? lang_ES
+      : language === "DE"
+      ? lang_DE
+      : language === "PL"
+      ? lang_PL
+      : lang_EN;
+
   const {
     register,
     trigger,
@@ -34,7 +54,7 @@ const Contact = () => {
                 ease: [0.14, 0.99, 0.43, 1.01],
               }}
             >
-              KONTAKT
+              {lang.contact_title}
             </motion.p>
           </div>
           <div className="overflow-hidden font-light text-xs md:text-sm">
@@ -47,8 +67,7 @@ const Contact = () => {
                 ease: [0.14, 0.99, 0.43, 1.01],
               }}
             >
-              Jeśli masz pytania lub po prostu chcesz powiedzieć "cześć" napisz
-              śmiało
+              {lang.contact_message}
               <span className="font-bold text-[#DA0F40]">.</span>
             </motion.p>
           </div>
@@ -95,7 +114,7 @@ const Contact = () => {
             <input
               className="w-full text-xs placeholder-gray-500 p-3 border-[1px] border-transparent border-b-gray-500 hover:border-[1px] hover:border-gray-500 focus:border-none rounded-none"
               type="text"
-              placeholder="Name"
+              placeholder={lang.contact_name}
               {...register("name", {
                 maxLength: 100,
               })}
@@ -119,7 +138,7 @@ const Contact = () => {
 
             <textarea
               className="w-full text-xs placeholder-gray-500 p-3 border-[1px] border-transparent border-b-gray-500 hover:border-[1px] hover:border-gray-500 hover:border-t-transparent rounded-none"
-              placeholder="Message"
+              placeholder={lang.contact_message}
               rows={5}
               cols={50}
               {...register("message", {

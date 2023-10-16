@@ -12,8 +12,11 @@ export const lang_EN = {
   about_par3: `Interested in web development and traveling.`,
   about_par4: `foot size: 44`,
   about_par5: `Head over to the contact page so we can talk about shooting your next project!`,
+  contact_title: "CONTACT",
+  contact_text: `If you have any questions or just want to say "hello", feel free to contact`,
+  contact_name: "Name",
+  contact_message: "Message",
 };
-
 
 export const lang_HR = {
   language: "HR",
@@ -44,6 +47,10 @@ export const lang_ES = {
   about_par3: `Estoy interesado en crear sitios web y viajar.`,
   about_par4: `Tamaño del pie: 44`,
   about_par5: `¡Ve a la página de contacto para que podamos hablar sobre cómo iniciar un proyecto conjunto!`,
+  contact_title: "CONTACTO",
+  contact_text: `Si tienes alguna pregunta o simplemente quieres saludar, no dudes en escribirnos.`,
+  contact_name: "Nombre",
+  contact_message: "Mensaje",
 };
 
 export const lang_DE = {
@@ -60,6 +67,10 @@ export const lang_DE = {
   about_par3: `Ich interessiere mich für das Erstellen von Websites und Reisen.`,
   about_par4: `Fußgröße: 44`,
   about_par5: `Gehen Sie zur Kontaktseite, damit wir über den Start eines gemeinsamen Projekts sprechen können!`,
+  contact_title: "KONTAKT",
+  contact_text: `Wenn Sie Fragen haben oder einfach nur „Hallo“ sagen möchten, schreiben Sie uns gerne`,
+  contact_name: "Name",
+  contact_message: "Nachricht",
 };
 
 export const lang_PL = {
@@ -76,4 +87,8 @@ export const lang_PL = {
   about_par3: `Interesuję się tworzeniem stron internetowych i podróżowaniem.`,
   about_par4: `rozmiar stopy: 44`,
   about_par5: `Przejdź do strony kontaktowej, byśmy mogli porozmawiać o rozpoczęciu wspólnego projektu!`,
+  contact_title: "KONTAKT",
+  contact_text: `Jeśli masz pytania lub po prostu chcesz powiedzieć "cześć" napisz śmiało`,
+  contact_name: "Imię",
+  contact_message: "Wiadomość",
 };
