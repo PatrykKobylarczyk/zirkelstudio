@@ -167,7 +167,7 @@ const Contact = () => {
                 ease: [0.14, 0.99, 0.43, 1.01],
               }}
             >
-              {lang.con}
+              {lang.contact_button}
             </motion.button>
           </form>
         </motion.div>
