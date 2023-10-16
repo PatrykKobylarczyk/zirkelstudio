@@ -80,11 +80,7 @@ const Works = () => {
                 <Image
                   src={images[currentImage].path}
                   alt="Interior photo"
-                  className={`h-full aspect-auto m-auto ${
-                    currentImage === 0 || currentImage === images.length - 1
-                      ? "object-contain"
-                      : "object-cover"
-                  }`}
+                  className="h-full aspect-auto m-auto object-contain"
                   onClick={() => setOpen(false)}
                 />
               </div>
