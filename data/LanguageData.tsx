@@ -16,6 +16,7 @@ export const lang_EN = {
   contact_text: `If you have any questions or just want to say "hello", feel free to contact`,
   contact_name: "Name",
   contact_message: "Message",
+  contact_button: "Send message",
 };
 
 export const lang_HR = {
@@ -51,6 +52,7 @@ export const lang_ES = {
   contact_text: `Si tienes alguna pregunta o simplemente quieres saludar, no dudes en escribirnos.`,
   contact_name: "Nombre",
   contact_message: "Mensaje",
+  contact_button: "Enviar mensaje",
 };
 
 export const lang_DE = {
@@ -70,7 +72,7 @@ export const lang_DE = {
   contact_title: "KONTAKT",
   contact_text: `Wenn Sie Fragen haben oder einfach nur „Hallo“ sagen möchten, schreiben Sie uns gerne`,
   contact_name: "Name",
-  contact_message: "Nachricht",
+  contact_message: "Nachricht senden",
 };
 
 export const lang_PL = {
@@ -90,5 +92,5 @@ export const lang_PL = {
   contact_title: "KONTAKT",
   contact_text: `Jeśli masz pytania lub po prostu chcesz powiedzieć "cześć" napisz śmiało`,
   contact_name: "Imię",
-  contact_message: "Wiadomość",
+  contact_message: "Wyślij wiadomość",
 };
