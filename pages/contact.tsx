@@ -22,7 +22,7 @@ const Contact = () => {
   return (
     <>
       <PageTransitioning />
-      <main className="w-full md:h-screen flex flex-col justify-center items-center gap-3 md:gap-12 px-5 py-24">
+      <main className="w-full md:h-screen flex flex-col justify-center items-center gap-3 md:gap-12 px-5 pt-36 pb-24">
         <div className="w-full md:w-1/2">
           <div className="overflow-hidden text-sm md:text-xl mb-2">
             <motion.p
@@ -62,13 +62,13 @@ const Contact = () => {
                 ease: [0.14, 0.99, 0.43, 1.01],
               }}
             >
-              <p className="my-3">PATRYK KOBYLARCZYK</p>
-              <a href="tel://+48789985677" className="block font-semibold">
+              <p className="my-3 font-semibold">PATRYK KOBYLARCZYK</p>
+              <a href="tel://+48789985677" className="block">
                 +48 789 985 677
               </a>
               <a
                 href="mailto:patryk.kobylarczyk@gmail.co"
-                className="block mt-2 font-semibold"
+                className="block mt-2"
               >
                 patryk.kobylarczyk@gmail.com
               </a>
@@ -93,7 +93,7 @@ const Contact = () => {
             className="flex flex-col justify-end"
           >
             <input
-              className="w-full text-xs placeholder-gray-500 p-4 border-[1px] border-transparent border-b-gray-500 hover:border-[1px] hover:border-gray-500 focus:border-none rounded-none"
+              className="w-full text-xs placeholder-gray-500 p-3 border-[1px] border-transparent border-b-gray-500 hover:border-[1px] hover:border-gray-500 focus:border-none rounded-none"
               type="text"
               placeholder="Name"
               {...register("name", {
@@ -102,7 +102,7 @@ const Contact = () => {
             />
 
             <input
-              className={`w-full text-xs placeholder-gray-500 p-4 border-[1px] border-transparent border-b-gray-500 hover:border-[1px] hover:border-t-transparent hover:border-gray-500 rounded-none`}
+              className={`w-full text-xs placeholder-gray-500 p-3 border-[1px] border-transparent border-b-gray-500 hover:border-[1px] hover:border-t-transparent hover:border-gray-500 rounded-none`}
               type="text"
               placeholder="Email"
               {...register("email", {
@@ -118,7 +118,7 @@ const Contact = () => {
             )}
 
             <textarea
-              className="w-full text-xs placeholder-gray-500 p-4 border-[1px] border-transparent border-b-gray-500 hover:border-[1px] hover:border-gray-500 hover:border-t-transparent rounded-none"
+              className="w-full text-xs placeholder-gray-500 p-3 border-[1px] border-transparent border-b-gray-500 hover:border-[1px] hover:border-gray-500 hover:border-t-transparent rounded-none"
               placeholder="Message"
               rows={5}
               cols={50}
@@ -138,7 +138,7 @@ const Contact = () => {
             )}
 
             <motion.button
-              className="self-end py-4 px-8 mt-3 md:mt-6 text-xs placeholder-gray-500 hover:bg-gray-100 transition duration-300 border-[1px]  border-gray-500 rounded-none"
+              className="self-end py-3 px-8 mt-3 md:mt-6 text-xs placeholder-gray-500 hover:bg-gray-100 transition duration-300 border-[1px]  border-gray-500 rounded-none"
               type="submit"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
