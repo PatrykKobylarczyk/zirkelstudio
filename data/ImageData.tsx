@@ -74,62 +74,6 @@ export const images = [
     path: photo002,
   },
   {
-    id: 2222,
-    path: photo222,
-  },
-  {
-    id: 2222,
-    path: photo222,
-  },
-  {
-    id: 2222,
-    path: photo222,
-  },
-  {
-    id: 2222,
-    path: photo222,
-  },
-  {
-    id: 2222,
-    path: photo222,
-  },
-  {
-    id: 2222,
-    path: photo222,
-  },
-  {
-    id: 2222,
-    path: photo222,
-  },
-  {
-    id: 2222,
-    path: photo222,
-  },
-  {
-    id: 2222,
-    path: photo222,
-  },
-  {
-    id: 2222,
-    path: photo222,
-  },
-  {
-    id: 2222,
-    path: photo222,
-  },
-  {
-    id: 2222,
-    path: photo222,
-  },
-  {
-    id: 2222,
-    path: photo222,
-  },
-  {
-    id: 2222,
-    path: photo222,
-  },
-  {
     id: 3,
     path: photo03,
   },
@@ -240,6 +184,10 @@ export const images = [
   {
     id: 221,
     path: photo221,
+  },
+  {
+    id: 2222,
+    path: photo222,
   },
   {
     id: 23,
